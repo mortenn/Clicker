@@ -1,22 +1,23 @@
-<div class="col">
-	<div class="card">
-		<div class="card-body">
-			<form>
-				<div class="form-group">
-					<label for="nick">Nick</label>
-					<input type="text" class="form-control" id="nick" placeholder="Enter your nick to begin" ng-model="$ctrl.nick">
-				</div>
-				<button type="submit" class="btn btn-primary" ng-click="$ctrl.start()" ng-disabled="$ctrl.nick.length < 3">Begin</button>
-			</form>
+<div class="container-fluid">
+	<div class="col">
+		<div class="card">
+			<div class="card-body">
+				<form>
+					<div class="form-group">
+						<label for="nick">Nick</label>
+						<input type="text" class="form-control" id="nick" placeholder="Enter your nick to begin" ng-model="$ctrl.nick">
+					</div>
+					<button type="submit" class="btn btn-primary" ng-click="$ctrl.start()" ng-disabled="$ctrl.nick.length < 3">Begin</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="col-2">
+		<div class="card">
+			<div class="card-header">Scoreboard</div>
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item" ng-repeat="player in $ctrl.clicker.scoreboard|orderBy:'-clicks'">{{player.nick}} {{player.clicks}} {{player.cps|number:2}}</li>
+			</ul>
 		</div>
 	</div>
 </div>
-<div class="col-1">
-	<div class="card">
-		<div class="card-header">Scoreboard</div>
-		<ul class="list-group list-group-flush">
-			<li ng-repeat="player in $ctrl.clicker.scoreboard|orderBy:'-clicks'">{{player.name}} {{player.clicks}} {{player.cpm|number:2}}</li>
-		</ul>
-	</div>
-</div>
-{{$ctrl}}

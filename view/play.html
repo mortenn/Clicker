@@ -1,11 +1,11 @@
 <div class="card text-white" ng-class="$ctrl.class" style="height: 400px;" ng-click="$ctrl.click()">
-	<div ng-if="$ctrl.running">
-		{{$ctrl.clicks}}<br>
-		{{$ctrl.cps}}<br>
-		{{$ctrl.timeLeft/1000|number:2}}s
+	<div ng-if="$ctrl.running" class="text-center">
+		<h1>{{$ctrl.clicks}}</h1>
+		<h1>{{$ctrl.cps|number:2}} CPS</h1>
+		<h1>{{$ctrl.timeLeft/1000|number:2}}s</h1>
 	</div>
-	<div ng-if="!$ctrl.running">
-		Start clicking!
+	<div ng-if="!$ctrl.running" class="text-center">
+		<h1>Start clicking!</h1>
 	</div>
 </div>
 {{$ctrl}}
