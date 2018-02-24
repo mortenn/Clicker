@@ -14,8 +14,8 @@ angular.module('clicker', ['ui.router','ngResource'])
 			$compile.debugInfoEnabled(false);
 			$state.state('clicker', {component:'clicker'});
 			$state.state('clicker.start', {url:'/start', component:'start'});
-			$state.state('clicker.play', {url:'/play', component:'play'});
-			$state.state('clicker.done', {url:'/done', component:'done'});
+			$state.state('clicker.play', {url:'/play', component:'play', params: { nick:null }});
+			$state.state('clicker.done', {url:'/done', component:'done', params: { nick:null, clicks:null, cps:null }});
 			$urlService.rules.otherwise('/start');
 		}
 	])
