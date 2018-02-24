@@ -12,11 +12,14 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-2 text-white bg-info">
+	<div class="col-4 bg-info">
 		<div class="card">
-			<div class="card-header">Scoreboard</div>
+			<div class="card-header text-white">Scoreboard</div>
 			<ul class="list-group list-group-flush">
-				<li class="list-group-item" ng-repeat="player in $ctrl.clicker.scoreboard|orderBy:'-clicks'">{{player.nick}} {{player.clicks}} {{player.cps|number:2}}</li>
+				<li class="list-group-item" ng-repeat="player in $ctrl.clicker.scoreboard|orderBy:'-clicks'">
+					<span class="pull-right">{{player.clicks}} {{player.cps|number:2}}</span>
+					<em>#{{$index}}</em> {{player.nick}}
+				</li>
 			</ul>
 		</div>
 	</div>
