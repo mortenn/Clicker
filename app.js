@@ -12,7 +12,7 @@ angular.module('clicker', ['ui.router','ngResource'])
 		function($compile, $state, $urlService)
 		{
 			$compile.debugInfoEnabled(false);
-			$state.state('clicker', {url:'/', component:'clicker'});
+			$state.state('clicker', {component:'clicker'});
 			$state.state('clicker.start', {url:'/start', component:'start'});
 			$state.state('clicker.play', {url:'/play', component:'play'});
 			$state.state('clicker.done', {url:'/done', component:'done'});
