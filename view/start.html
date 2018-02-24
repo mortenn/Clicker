@@ -8,4 +8,10 @@
 			<button type="submit" class="btn btn-primary" ng-click="$ctrl.start()" ng-disabled="$ctrl.nick.length < 3">Begin</button>
 		</form>
 	</div>
+	<div class="col-1">
+		<div class="card-header">Scoreboard</div>
+		<ul class="list-group list-group-flush">
+			<li ng-repeat="player in $ctrl.clicker.scoreboard|orderBy:'-clicks'">{{player.name}} {{player.clicks}} {{player.cpm|number:2}}</li>
+		</ul>
+	</div>
 </div>

@@ -3,6 +3,9 @@ angular.module('clicker').component(
 	{
 		controller: ['$state',Start],
 		templateUrl: 'view/start.html',
+		require: {
+			clicker: '^^clicker'
+		}
 	}
 );
 
