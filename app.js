@@ -1,4 +1,4 @@
-angular.module('clicker', ['ui.router','ngResource'])
+angular.module('clicker', ['ui.router','ngResource','LocalStorageModule'])
 	.run([
 		'$rootScope', '$stateParams', '$state',
 		function($rootScope, $stateParams, $state)
