@@ -14,6 +14,9 @@ function Done($state, $stateParams, $timeout)
 	this.nick = $stateParams.nick;
 	this.clicks = $stateParams.clicks;
 	this.cps = $stateParams.cps;
-	this.clicker.addScore($stateParams);
-	$timeout(function(){ $state.go('clicker.start'); }, 5000);
+	this.$onInit = function()
+	{
+		this.clicker.addScore($stateParams);
+		$timeout(function(){ $state.go('clicker.start'); }, 5000);
+	};
 }
