@@ -17,11 +17,17 @@
 			<div class="card-header text-white">Scoreboard</div>
 			<ul class="list-group list-group-flush">
 				<li class="list-group-item" ng-repeat="player in $ctrl.clicker.scoreboard|orderBy:'-clicks'">
-					<span class="pull-right">{{player.clicks}} {{player.cps|number:2}}</span>
-					<em>#{{$index}}</em> {{player.nick}}
+					<div class="row">
+						<div class="col">
+							<em>#{{$index+1}}</em>
+							{{player.nick}}
+						</div>
+						<div class="col-1">{{player.clicks}}</div>
+						<div class="col-1">{{player.cps|number:2}}</div>
+					</div>
 				</li>
 			</ul>
-			<div class="card-body" ng-if="$ctrl.clicker.scoreboard.length == 0">Play some games first..</div>
+			<div class="card-body text-white" ng-if="$ctrl.clicker.scoreboard.length == 0">Play some games first..</div>
 		</div>
 	</div>
 </div>
