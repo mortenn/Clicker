@@ -1,5 +1,9 @@
-<div class="card">
-	{{$ctrl.nick}}<br>
-	Clicks: {{$ctrl.clicks}} ({{$ctrl.cps|number:2}} CPS)
+<div class="container">
+	<div class="card text-white bg-primary">
+		<div class="card-header">Game Over!</div>
+		<div class="card-body">
+			<h1>{{$ctrl.nick}}</h1>
+			<h2>Clicks: {{$ctrl.clicks}} ({{$ctrl.cps|number:2}} CPS)</h2>
+		</div>
+	</div>
 </div>
-{{$ctrl}}
