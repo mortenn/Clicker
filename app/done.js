@@ -13,7 +13,6 @@ function Done($state, $stateParams, $timeout)
 {
 	this.$onInit = function()
 	{
-		console.log($stateParams);
 		this.nick = $stateParams.nick;
 		this.clicks = $stateParams.clicks;
 		this.cps = $stateParams.cps;
