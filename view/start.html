@@ -18,12 +18,9 @@
 			<ul class="list-group list-group-flush">
 				<li class="list-group-item" ng-repeat="player in $ctrl.clicker.scoreboard|orderBy:'-clicks'">
 					<div class="row">
-						<div class="col">
-							<em>#{{$index+1}}</em>
-							{{player.nick}}
-						</div>
-						<div class="col-1">{{player.clicks}}</div>
-						<div class="col-1">{{player.cps|number:2}}</div>
+						<div class="pull-right">{{player.clicks}} ({{player.cps|number:2}}/s)</div>
+						<em>#{{$index+1}}</em>
+						{{player.nick}}
 					</div>
 				</li>
 			</ul>
