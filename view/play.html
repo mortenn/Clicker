@@ -1,4 +1,4 @@
-<div class="card text-white" ng-class="$ctrl.class" style="height: 600px;" ng-click="$ctrl.click()">
+<div class="card text-white" ng-class="$ctrl.class" style="height: 600px;" ng-click="$ctrl.click()" prevent-right-click>
 	<div ng-if="$ctrl.running" class="text-center">
 		<h1>{{$ctrl.clicks}}</h1>
 		<h1>{{$ctrl.cps|number:2}} CPS</h1>
