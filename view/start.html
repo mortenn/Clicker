@@ -12,8 +12,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-4 bg-info">
-		<div class="card">
+	<div class="col-4">
+		<div class="card bg-info">
 			<div class="card-header text-white">Scoreboard</div>
 			<ul class="list-group list-group-flush">
 				<li class="list-group-item" ng-repeat="player in $ctrl.clicker.scoreboard|orderBy:'-clicks'">
@@ -21,6 +21,7 @@
 					<em>#{{$index}}</em> {{player.nick}}
 				</li>
 			</ul>
+			<div class="card-body" ng-if="$ctrl.clicker.scoreboard.length == 0">Play some games first..</div>
 		</div>
 	</div>
 </div>
