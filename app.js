@@ -8,8 +8,8 @@ angular.module('clicker', ['ui.router','ngResource'])
 		}
 	])
 	.config([
-		'$compileProvider', '$stateProvider', '$urlServiceProvider',
-		function($compile, $state, $urlService)
+		'$compileProvider', '$stateProvider', '$urlServiceProvider', 'localStorageServiceProvider',
+		function($compile, $state, $urlService, localStorageServiceProvider)
 		{
 			$compile.debugInfoEnabled(false);
 			$state.state('clicker', {component:'clicker'});
@@ -17,6 +17,7 @@ angular.module('clicker', ['ui.router','ngResource'])
 			$state.state('clicker.play', {url:'/play', component:'play', params: { nick:null }});
 			$state.state('clicker.done', {url:'/done', component:'done', params: { nick:null, clicks:null, cps:null }});
 			$urlService.rules.otherwise('/start');
+			localStorageServiceProvider.setPrefix('clicker');
 		}
 	])
 	.directive('preventRightClick', [
