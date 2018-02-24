@@ -9,8 +9,8 @@ angular.module('clicker').component(
 function Clicker()
 {
 	this.scoreboard = [];
-	this.addScore = function(score)
+	this.addScore = function(nick, clicks, cps)
 	{
-		this.scoreboard.push(score);
+		this.scoreboard.push({nick:nick,clicks:clicks,cps:cps});
 	}
 }

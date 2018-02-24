@@ -8,6 +8,7 @@ angular.module('clicker').component(
 
 function Play($interval, $state, $stateParams)
 {
+	console.log($stateParams);
 	this.nick = $stateParams.nick;
 	this.totalTime = 5000;
 	this.timeLeft = this.totalTime;
