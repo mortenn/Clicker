@@ -11,6 +11,7 @@ angular.module('clicker').component(
 
 function Done($state, $stateParams, $timeout)
 {
+	console.log($stateParams);
 	this.nick = $stateParams.nick;
 	this.clicks = $stateParams.clicks;
 	this.cps = $stateParams.cps;
