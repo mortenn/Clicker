@@ -26,8 +26,8 @@ function Play($interval, $state, $stateParams)
 			$interval.cancel(this.timer);
 			$state.go('clicker.done', {nick: this.nick, clicks: this.clicks, cps: this.cps});
 		}
-		if(this.timeLeft < 2000)
-			this.class = this.timeLeft % 200 ? 'bg-dark' : 'bg-danger';
+		if(this.timeLeft < 5000)
+			this.class = this.timeLeft % 400 ? 'bg-dark' : 'bg-danger';
 		this.cps = 1000 * this.clicks / (this.totalTime - this.timeLeft);
 	};
 	this.click = function()
