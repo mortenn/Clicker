@@ -27,7 +27,7 @@ function Play($interval, $state, $stateParams)
 			$state.go('clicker.done', {nick: this.nick, clicks: this.clicks, cps: this.cps});
 		}
 		if(this.timeLeft < 2000)
-			this.class = this.timeLeft % 200 > 100 ? 'bg-dark' : 'bg-danger';
+			this.class = this.timeLeft % 200 ? 'bg-dark' : 'bg-danger';
 		this.cps = 1000 * this.clicks / (this.totalTime - this.timeLeft);
 	};
 	this.click = function()
