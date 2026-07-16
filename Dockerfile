@@ -21,7 +21,7 @@ COPY package*.json ./
 COPY . .
 
 # Build the site
-RUN make SHELL="/bin/bash" -d
+RUN make
 
 # -----------------------------
 # Bundle stage
