@@ -1,7 +1,9 @@
 # -----------------------------
 # Build stage
 # -----------------------------
-FROM node:20-bookworm AS builder
+FROM node:24-bookworm AS builder
+
+RUN corepack enable
 
 # Install build tools
 RUN apt-get update && \
