@@ -32,6 +32,10 @@ importers:
       popper.js:
         specifier: ^1.16.1
         version: 1.16.1
+    devDependencies:
+      uglify-js:
+        specifier: ^3.19.3
+        version: 3.19.3
 
 packages:
 
@@ -74,6 +78,11 @@ packages:
     resolution: {integrity: sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==}
     deprecated: You can find the new Popper v2 at @popperjs/core, this package is dedicated to the legacy v1
 
+  uglify-js@3.19.3:
+    resolution: {integrity: sha512-v3Xu+yuwBXisp6QYTcH4UbH+xYJXqnq2m/LtQVWKWzYc1iehYnLixoQDN9FH6/j9/oybfd6W9Ghwkl8+UMKTKQ==}
+    engines: {node: '>=0.8.0'}
+    hasBin: true
+
 snapshots:
 
   '@uirouter/angularjs@1.0.6(angular@1.8.3)':
@@ -99,3 +108,5 @@ snapshots:
   jquery@3.7.1: {}
 
   popper.js@1.16.1: {}
+
+  uglify-js@3.19.3: {}
