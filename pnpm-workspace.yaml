@@ -1,0 +1,3 @@
+allowBuilds:
+  '@uirouter/angularjs': set this to true or false
+  '@uirouter/core': set this to true or false

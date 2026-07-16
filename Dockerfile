@@ -15,8 +15,6 @@ WORKDIR /app
 # Copy dependency manifests first for better layer caching
 COPY package*.json ./
 
-RUN npm ci
-
 # Copy application source
 COPY . .
 

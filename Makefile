@@ -1,7 +1,7 @@
 all: lib www/bundle/js.gz www/bundle/css.gz www/fonts www/index.html.gz
 
 lib:
-	npm install
+	pnpm install --frozen-lockfile
 
 www/bundle/js.gz: \
 	node_modules/angular/angular.js \
