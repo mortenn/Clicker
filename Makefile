@@ -13,7 +13,7 @@ www/bundle/js.gz: \
 	node_modules/bootstrap/dist/js/bootstrap.js \
 	app.js app/*.js
 	pnpm exec uglifyjs $^ \
-		--source-map"filename=www/bundle/js.map,url=/bundle/js.map" \
+		--source-map "filename='www/bundle/js.map',url='http:/bundle/js.map'" \
 		-o www/bundle/js
 	gzip -f www/bundle/js
 
